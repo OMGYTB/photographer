@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Photographe Professionnel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- En-tête et Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="Logo Photographe">
+                <span class="logo-text">Photographer</span>
+            </div>
+            
+            <button class="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#accueil" data-translate="accueil">Accueil</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="language-selector">
+                <select id="languageSelect" onchange="changeLanguage(this.value)">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Capturez vos moments précieux</h1>
+        <p class="hero-subtitle">Photographe professionnel spécialisé dans les mariages, portraits et événements</p>
+        <a href="#contact" class="cta-button">Réserver une séance</a>
+    </div>
+</section>
+
+<!-- Section Portfolio -->
+<section id="portfolio" class="portfolio">
+    <div class="section-header">
+        <h2 class="section-title" data-translate="sectionTitle">Mon Portfolio</h2>
+        <p class="section-subtitle" data-translate="sectionSubtitle">Découvrez une sélection de mes meilleures réalisations photographiques</p>
+    </div>
+<br>
+    <div class="portfolio-filters">
+        <button class="filter-button active" data-filter="all" data-translate="filterButtonActive">Tout</button>
+        <button class="filter-button" data-filter="mariage" data-translate="filterButtonMariage">Mariage</button>
+        <button class="filter-button" data-filter="portrait" data-translate="filterButtonPortrait">Portrait</button>
+        <button class="filter-button" data-filter="evenement">Événement</button>
+        <button class="filter-button" data-filter="paysage">Paysage</button>
+    </div>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="mariage">
+            <img src="assets/img/MARIAGE.jpg" alt="Mariage" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Mariage de Sarah & Tom</h3>
+                <p class="portfolio-category">Mariage</p>
+            </div>
+        </div>
+        <div class="portfolio-item" data-category="mariage">
+            <img src="assets/img/MARIAGE-2.jpg" alt="Mariage" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Mariage de Sarah & Tom</h3>
+                <p class="portfolio-category">Mariage</p>
+            </div>
+        </div>
+        <div class="portfolio-item" data-category="portrait">
+            <img src="assets/img/PORTRAIT-STEPHANIE.jpeg" alt="Portrait" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Portrait de Stéphanie</h3>
+                <p class="portfolio-category">Portrait</p>
+            </div>
+        </div>
+        <div class="portfolio-item" data-category="portrait">
+            <img src="assets/img/PORTRAIT-EMMA.jpg" alt="Portrait" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Portrait de Emma</h3>
+                <p class="portfolio-category">Portrait</p>
+            </div>
+        </div>
+        <div class="portfolio-item" data-category="paysage">
+            <img src="assets/img/TEMAE.jpg" alt="Paysage" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Photographie de la Plage de TEMAE</h3>
+                <p class="portfolio-category">TEMAE</p>
+            </div>
+        </div>
+        <div class="portfolio-item" data-category="paysage">
+            <img src="assets/img/MONT-BLANC.jpg" alt="Paysage" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Photographie du Mont Blanc</h3>
+                <p class="portfolio-category">Mont Blanc</p>
+            </div>
+        </div>
+        <div class="portfolio-item" data-category="evenement">
+            <img src="assets/img/EVENEMENTIEL.jpg" alt="Paysage" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Photographie du Tapis Rouge de Canne</h3>
+                <p class="portfolio-category">Nawell Madani et Djebril Zonga</p>
+            </div>
+        </div>
+        <div class="portfolio-item" data-category="evenement">
+            <img src="assets/img/EVENEMENTIEL-2.jpg" alt="Paysage" class="portfolio-image">
+            <div class="portfolio-overlay">
+                <h3 class="portfolio-title">Photographie de Mila al-Zahrani</h3>
+                <p class="portfolio-category">Mila al-Zahrani</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Services Section -->
+<section id="services" class="services">
+    <div class="services-container">
+        <div class="section-header">
+            <h2 class="section-title">Mes Services</h2>
+            <p class="section-subtitle">Découvrez mes prestations photographiques personnalisées pour immortaliser vos moments importants</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <img src="assets/img/MARIAGE-2.jpg" alt="Service Mariage" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="service-title">Mariage</h3>
+                    <p class="service-description">Capturez chaque moment magique de votre journée spéciale avec un reportage photo complet.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Séance d'engagement offerte</li>
+                        <li><i class="fas fa-check"></i> Photos 4k</li>
+                        <li><i class="fas fa-check"></i> Couverture complète (8-12h)</li>
+                        <li><i class="fas fa-check"></i> Album photo premium</li>
+                        <li><i class="fas fa-check"></i> Galerie en ligne privée</li>
+                        <li><i class="fas fa-check"></i>Photos livrée sous 10 à 15 jours</li>                        </li>
+                    </ul>
+                    <div class="service-price">
+                        À partir de 1500€ <span>/journée</span>
+                    </div>
+                    <button class="service-button" onclick="openModal('mariage')">En savoir plus</button>
+                </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <img src="assets/img/PORTRAIT-STEPHANIE.jpeg " alt="Service Portrait" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="service-title">Portrait</h3>
+                    <p class="service-description">Sessions photo personnalisées pour particuliers et professionnels.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Séance d'1 heure</li>
+                        <li><i class="fas fa-check"></i> Photos 4k</li>
+                        <li><i class="fas fa-check"></i> 15 photos retouchées</li>
+                        <li><i class="fas fa-check"></i> Choix du lieu</li>
+                        <li><i class="fas fa-check"></i> Conseils vestimentaires</li>
+                        <li><i class="fas fa-check"></i>Photos livrée sous 24h à 48h</li>
+                    </ul>
+                    <div class="service-price">
+                        À partir de 200€ <span>/séance</span>
+                    </div>
+                    <button class="service-button" onclick="openModal('portrait')">En savoir plus</button>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <img src="assets/img/EVENEMENTIEL-2.jpg" alt="Service Événementiel" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="service-title">Événementiel</h3>
+                    <p class="service-description">Couverture professionnelle de vos événements d'entreprise et particuliers.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Reportage sur mesure</li>
+                        <li><i class="fas fa-check"></i> Photos 4k</li>
+                        <li><i class="fas fa-check"></i> Support technique</li>
+                        <li><i class="fas fa-check"></i> Album photo premium</li>
+                        <li><i class="fas fa-check"></i> Galerie en ligne privée</li>
+                        <li><i class="fas fa-check"></i> Licence commerciale</li>
+                    </ul>
+                    <div class="service-price">
+                        À partir de 500€ <span>/événement</span>
+                    </div>
+                    <button class="service-button" onclick="openModal('evenement')">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="serviceModal" class="service-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <div class="testimonials-container">
+        <div class="section-header">
+            <h2 class="section-title">Avis Clients</h2>
+            <p class="section-subtitle">Découvrez ce que mes clients disent de mon travail</p>
+        </div>
+
+        <div class="testimonials-slider">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="assets/img/Marie-avis-client.avif" alt="Client 1" class="testimonial-image">
+                    <div class="testimonial-info">
+                        <h4>Marie</h4>
+                        <p>Mariage - Juin 2023</p>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Un talent exceptionnel pour capturer les moments d'émotion. Nos photos de mariage sont magnifiques et reflètent parfaitement l'ambiance de notre journée."
+                </p>
+                <i class="fas fa-quote-right testimonial-quote"></i>
+            </div>
+
+            <!-- Ajoutez d'autres témoignages similaires -->
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="contact-container">
+        <div class="section-header">
+            <h2 class="section-title">Contactez-moi</h2>
+            <p class="section-subtitle">Parlons de votre projet photo</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Adresse</h4>
+                        <p>123 Rue de la Photo<br>75000 Paris, France</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Téléphone</h4>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>contact@monsite.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Horaires</h4>
+                        <p>Lun - Ven: 9h - 18h<br>Sam: Sur rendez-vous</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+    <div class="form-group">
+        <label class="form-label">Nom complet</label>
+        <input type="text" name="name" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Téléphone</label>
+        <input type="tel" name="phone" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Type de service</label>
+        <select name="service" class="form-control" required>
+            <option value="">Sélectionnez un service</option>
+            <option value="mariage">Mariage</option>
+            <option value="portrait">Portrait</option>
+            <option value="evenement">Événement</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea name="message" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Envoyer le message</button>
+</form>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <!-- À propos -->
+            <div class="footer-section footer-about">
+                <h3 class="footer-title">À propos</h3>
+                <p>Photographe professionnel passionné, je capture vos moments les plus précieux avec créativité et authenticité.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Liens rapides -->
+            <div class="footer-section">
+                <h3 class="footer-title">Liens rapides</h3>
+                <ul class="quick-links">
+                    <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> À propos</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Témoignages</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Rue de la Photo, 75000 Paris</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@monsite.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Lun - Ven: 9h - 18h</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-section">
+                <h3 class="footer-title">Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir mes dernières actualités et offres spéciales.</p>
+                <form class="footer-newsletter">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Votre Nom. Tous droits réservés | Conçu avec <i class="fas fa-heart" style="color: var(--secondary-color)"></i></p>
+        </div>
+    </div>
+</footer>
+
+    
+
+<script src="assets/js/filter.js"></script>
+
+<script src="assets/js/modal.js"></script>
+
+<script src="assets/js/hamburger.js"></script>
+
+<script src="assets/js/translantion.js"></script>
+
+<script src="assets/js/language.js"></script>
+
+<script src="assets/js/contact-form.js"></script>
+
+</body>
+</html>

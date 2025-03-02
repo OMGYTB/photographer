@@ -1,0 +1,50 @@
+const translations = {
+    fr: {
+        accueil: "Accueil",
+        portfolio: "Portfolio",
+        services: "Services",
+        about: "À propos",
+        contact: "Contact",
+        heroTitle: "Capturez vos moments précieux",
+        heroSubtitle: "Photographe professionnel spécialisé dans les mariages, portraits et événements",
+        bookButton: "Réserver une séance",
+        sectionTitle: "Mon Portfolio",
+        sectionSubtitle: "Découvrez une sélection de mes meilleures réalisations photographiques",
+        filterButtonActive: "Tout",
+        filterButtonMariage: "Mariage",
+        filterButtonPortrait: "Portrait",
+        // Ajoutez d'autres traductions ici
+    },
+    en: {
+        accueil: "Home",
+        portfolio: "Portfolio",
+        services: "Services",
+        about: "About",
+        contact: "Contact",
+        heroTitle: "Capture your precious moments",
+        heroSubtitle: "Professional photographer specialized in weddings, portraits and events",
+        bookButton: "Book a session",
+        sectionTitle: "My Portfolio",
+        sectionSubtitle: "Discover a selection of my best photographic work",
+        filterButtonActive: "All",
+        filterButtonMariage: "Marriage",
+        filterButtonPortrait: "Portrait",
+        // Ajoutez d'autres traductions ici
+    },
+    es: {
+        accueil: "Inicio",
+        portfolio: "Portafolio",
+        services: "Servicios",
+        about: "Sobre mí",
+        contact: "Contacto",
+        heroTitle: "Captura tus momentos preciosos",
+        heroSubtitle: "Fotógrafo profesional especializado en bodas, retratos y eventos",
+        bookButton: "Reservar sesión",
+        sectionTitle: "Mi Portfolio",
+        sectionSubtitle: "Descubra una selección de mis mejores trabajos fotográficos",
+        filterButtonActive: "Todos",
+        filterButtonMariage: "Boda",
+        filterButtonPortrait: "Retrato",
+        // Ajoutez d'autres traductions ici
+    }
+};
