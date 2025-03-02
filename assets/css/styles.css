@@ -495,19 +495,6 @@ header {
     overflow: hidden;
 }
 
-.services::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%),
-                linear-gradient(-45deg, rgba(255,255,255,0.03) 25%, transparent 25%);
-    background-size: 60px 60px;
-    opacity: 0.1;
-}
-
 .services-container {
     max-width: 1600px;
     margin: 0 auto;
@@ -518,7 +505,7 @@ header {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 4rem;
 }
@@ -526,62 +513,40 @@ header {
 .service-card {
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 3rem 2rem;
+    padding: 2rem;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(10px);
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.05),
-        transparent
-    );
-    transition: 0.5s;
-}
-
-.service-card:hover::before {
-    left: 100%;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    border-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
 .service-image {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     margin-bottom: 2rem;
-    filter: grayscale(0%) contrast(100%); /* Image en couleur par défaut */
+    filter: grayscale(0%) contrast(100%);
     transition: var(--transition);
 }
 
-.service-card:hover .service-image {
-    filter: grayscale(100%) contrast(120%); /* Image en noir et blanc au survol */
+.service-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-
 .service-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     color: var(--secondary-color);
     opacity: 0.8;
 }
 
 .service-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 2px;
     margin-bottom: 1rem;
@@ -591,13 +556,14 @@ header {
 .service-description {
     font-size: 0.9rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     opacity: 0.8;
 }
 
 .service-features {
     list-style: none;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
 }
 
 .service-features li {
@@ -614,14 +580,14 @@ header {
 }
 
 .service-price {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 300;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 1px;
 }
 
 .service-price span {
-    font-size: 1rem;
+    font-size: 0.9rem;
     opacity: 0.7;
 }
 
@@ -638,10 +604,81 @@ header {
     transition: var(--transition);
 }
 
+/* Hover Effects */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.service-card:hover .service-image {
+    filter: grayscale(100%) contrast(120%);
+}
+
 .service-button:hover {
     background: var(--secondary-color);
     color: var(--primary-color);
 }
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    .service-description {
+        font-size: 0.85rem;
+    }
+
+    .service-features li {
+        font-size: 0.85rem;
+    }
+
+    .service-price {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-container {
+        padding: 0 1rem;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+
+    .service-image {
+        height: 180px;
+    }
+
+    .service-icon {
+        font-size: 1.8rem;
+    }
+
+    .service-title {
+        font-size: 1.2rem;
+    }
+}
+
 
 /* Modal Styles */
 .service-modal {
